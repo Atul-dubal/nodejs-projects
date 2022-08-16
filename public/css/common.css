@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: fantasy;
+  box-sizing: border-box;
 }
 nav{
   width: 100%;
@@ -50,7 +51,7 @@ h3{
   padding: 10px;
   text-align: center;
 }
-/* For Contact Us Section Css */
+/* For Contact Us Section Css 
 #contact-us{
   width: 85%;
   text-align: center;

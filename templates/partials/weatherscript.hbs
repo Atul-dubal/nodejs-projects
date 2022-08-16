@@ -1,0 +1,26 @@
+<script >
+ var ws = document.getElementById("ws");
+ var data = document.getElementById("contact-us");
+ var errorTag = document.getElementById("errorTag");
+let WeatherStatus = "{{WeatherStatus}}";
+let notcity= "{{response}}";
+
+if(notcity=="error"){
+
+  errorTag.innerHTML="<h5 align='center'style='margin:20px; padding:20px;color:red; background:lightred'>Please Enter Correct City Name </h5>";
+  //data.style.display="none";
+}else{
+   if(WeatherStatus=="Clouds"){
+     ws.innerHTML="<i class='fas fa-cloud'></i>"
+   }
+else if(WeatherStatus=="Rain"){
+     ws.innerHTML="<i class='fas fa-cloud-rain'></i>"
+   }
+else if(WeatherStatus=="Sun"){
+     ws.innerHTML="<i class='fas fa-sun'></i>"
+   }
+else{
+   ws.innerHTML="<i class='fas fa-cloud'></i>"
+}
+}
+</script>

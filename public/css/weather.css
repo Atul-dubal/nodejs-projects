@@ -1,0 +1,27 @@
+p{
+  color: lightblue;
+}
+span{
+  text-decoration:underline;
+ color: black;
+ }
+/* For Contact Us Section Css */
+#contact-us{
+  width: 85%;
+  text-align: center;
+  background :#a1a3a4;
+  padding: 1%;
+  margin: 5%;
+}
+#contact-us label, #contact-us input {
+  margin: 10px;
+  text-align: center;
+}
+#contact-us input{
+  width: 70%;
+  height: 30px;
+}
+#contact-us textarea{
+  width: 70%;
+ 
+}

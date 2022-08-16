@@ -1,80 +1,18 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1"
-    <title></title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <style>
-    p{
-      color: ;
-    }
-    span{
-      text-decoration:underline;
-      color: black;
-    }
-    </style>
-  </head>
-  <body>                                                           <nav>
-     <img src="img/images~2.png" ><header id="header"><i class="fas fa-snowflake"></i> Check Weather <i class="fas fa-snowflake"></i></header><span id="menu">     <div id="menu">
-     <div id="menu1"></div>
-     <div id="menu2"></div>
-     <div id="menu3"></div>
-   </div>
-</span>
-   </nav>
- <!-- Intro section -->
- <div id="errorTag"> </div>
- <!-- Contact Us Section -->
- <div id="contact-us">
-   <form action="/" method="post">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-     <label>City Name</label>
-     <br />
-     <input type="text" name="cityname" placeholder="Enter City Name">
-     <br />
-     <input type="submit" value="Submit">
+  <title>HTML</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
-   </form>
- </div>
- <div id="data" style="color:lightblue;margin:10px;padding:20px" align="center">
-     <h3 style="margin:10px;padding:20px;font-size:50px" id="ws">Weather Status:-{{WeatherStatus}}  </h3>
-   <div id="tempStatus"></div>
-   <p style="margin:10px;padding:20px"> City Name :- <span>{{cityname}}</span></p>
-   <p style="margin:10px;padding:20px">Country Name :- <span>{{country}}</span></p>
-   <p style="margin:10px;padding:20px">Temprature:- <span>{{temp}}</span></p>
+<body>
+ {{>header}}
  
- </div>
- 
- <!-- footer section -->
- <footer >
-
- </footer>
- <script > 
- var ws = document.getElementById("ws");
- var data = document.getElementById("contact-us");
- var errorTag = document.getElementById("errorTag");
-let WeatherStatus = "{{WeatherStatus}}";
-let notcity= "{{response}}";
-
-if(notcity=="error"){
- 
-  errorTag.innerHTML="<h5 align='center'style='margin:20px; padding:20px;color:red; background:lightred'>Please Enter Correct City Name </h5>";
-  //data.style.display="none";
-}else{ 
-   if(WeatherStatus=="Clouds"){
-     ws.innerHTML="<i class='fas fa-cloud'></i>"
-   }
-else if(WeatherStatus=="Rain"){
-     ws.innerHTML="<i class='fas fa-cloud-rain'></i>"
-   }
-else if(WeatherStatus=="Sun"){
-     ws.innerHTML="<i class='fas fa-sun'></i>"
-   }
-else{
-   ws.innerHTML="<i class='fas fa-cloud'></i>"
-}
-}
-</script>
-  </body>
+  {{>navscript}}
+</body>
+</html>

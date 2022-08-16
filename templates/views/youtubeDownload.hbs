@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>YouTube Video Downloader</title>
+  
+  <link rel="stylesheet" href="css/youtubeDownload.css">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+  
+  {{>header}}
+  <h3>Download YouTube Video</h3>
+  
+  <iframe src="{{embedUrl}}"></iframe>
+  
+ 
+   <div id="formate-box">
+     <div id="btn">
+    <button class="btn active" id="videobtn" onclick="showvideolinks();">Video (mp4)</button> <span><button id="audiobtn" class="btn" onclick="showaudiolinks();">Audio (mp3)</button></span>
+   
+    </div>
+    <hr />
+  <div class="video-audio"id="video">
+    {{#each formate}}
+    {{#if this.hasVideo}}
+    {{#if this.hasAudio}}
+     <p>{{this.qualityLabel}}<span>
+    <button class="btn"><a href="{{this.url}}" download target="_blank">Download Video </a></button></span></p><br />
+   {{/if}}
+    {{/if}}
+    {{/each}}
+   </div>
+   <div class="video-audio" id="audio">
+   {{#each formate}}
+      {{#if this.hasVideo}}
+      
+      {{else}}
+      <p>{{this.audioBitrate}}<span>
+      <button class="btn"><a href="{{this.url}}" download target="_blank">Download Audio</a></button></span></p><br \>
+     
+  {{/if}}
+  {{/each}}
+  </div>
+  </div>  
+ 
+   <script>
+   
+    var videobtn = document.getElementById("videobtn");
+     var audiobtn = document.getElementById("audiobtn");
+     var video = document.getElementById("video");
+     var audio = document.getElementById("audio");
+
+     function showvideolinks(){
+          
+        audio.style.display="none";
+        video.style.display="block";
+        audiobtn.classList.remove("active");
+        videobtn.classList.add("active");
+        
+     }
+   
+     function showaudiolinks(){
+          
+        video.style.display="none";
+        audio.style.display="block";
+        audiobtn.classList.add("active");
+        videobtn.classList.remove("active");
+     }
+     
+   </script>
+ 
+ </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>YouTube Video Downloader</title>
+  
+  <link rel="stylesheet" href="css/youtube.css">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+  {{>header}}
+  
+    <h3>Download YouTube Video</h3>
+  <form action="/youtubeDownload" method="post">
+  <input type="text" placeholder="Enter Video Url You Want Download"name="search" id="search">
+  
+  <input type="submit" id="submit"value="Download">
+  
+  
+</form>
+  
+ <div id="howtouse">
+ 
+   <h2>How To Download YouTube Videos </h2>
+   <p>
+     1) Open YouTube and Copy The Link of Video Which You Want To Download 
+     </p>
+   <p>
+     2) Paste This Link Into <a href="#search">Search Box.</a>
+     <p>
+     3) Click On Download.
+   </p>
+ </div>
+
+{{>navscript}}
+</body>
+</html>

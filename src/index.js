@@ -18,6 +18,7 @@ app.use(bodyparser.urlencoded({
 app.use(bodyparser.json());
 app.set("view engine","hbs");
 app.set("views",viewspath)
+hbs.registerPartials(path.join(__dirname,"../templates/partials"));
 //Get All Routes 
 app.use("/",Router);
 

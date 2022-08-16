@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"
+    <title></title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet"href="css/weather.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <style>
+   
+    </style>
+  </head>
+  <body>   
+
+   {{>header}}
+  
+   <h3>Check Weather By City Name</h3> 
+ <!-- Intro section -->
+ <div id="errorTag"> </div>
+ <!-- Contact Us Section -->
+ <div id="contact-us">
+   <form action="/weather" method="post">
+
+     <label>City Name</label>
+     <br />
+     <input type="text" name="cityname" placeholder="Enter City Name">
+     <br />
+     <input type="submit" value="Submit">
+
+   </form>
+ </div>
+ <div id="data" style="color:lightblue;margin:10px;padding:20px" align="center">
+     <h3 style="margin:10px;padding:20px;font-size:50px" id="ws">Weather Status:-{{WeatherStatus}}  </h3>
+   <div id="tempStatus"></div>
+   <p style="margin:10px;padding:20px"> City Name :- <span>{{cityname}}</span></p>
+   <p style="margin:10px;padding:20px">Country Name :- <span>{{country}}</span></p>
+   <p style="margin:10px;padding:20px">Temprature:- <span>{{temp}}</span></p>
+ 
+ </div>
+ 
+{{>weatherscript}}
+{{>navscript}}
+  </body>
